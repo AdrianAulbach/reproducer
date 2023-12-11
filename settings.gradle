@@ -9,3 +9,10 @@ pluginManagement {
     }
 }
 rootProject.name='reproducer'
+include 'commons'
+include 'commons:commons-api'
+findProject(':commons:commons-api')?.name = 'commons-api'
+include 'commons:commons-service'
+findProject(':commons:commons-service')?.name = 'commons-service'
+include 'consumer'
+

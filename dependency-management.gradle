@@ -1,0 +1,26 @@
+
+
+ext {
+
+    libs = [
+            commonsApi      : project(':commons:commons-api'),
+            commonsService  : project(':commons:commons-service'),
+    ]
+
+    libs = libs + [
+            containerLibs       : [
+                    ("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"),
+                    "io.quarkus:quarkus-arc:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-config-yaml:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-scheduler:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-hibernate-orm-panache:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-micrometer-registry-prometheus:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-hibernate-validator:${quarkusPlatformVersion}",
+
+                    "io.quarkus:quarkus-smallrye-openapi:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-smallrye-health:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-jackson:${quarkusPlatformVersion}",
+                    "io.quarkus:quarkus-rest-client-jackson:${quarkusPlatformVersion}",
+            ]
+    ]
+}

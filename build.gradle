@@ -8,20 +8,27 @@ repositories {
     mavenLocal()
 }
 
+apply from: 'dependency-management.gradle'
+
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
+//    implementation project(':consumer')
+    implementation project(path: ':consumer')
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
+    implementation project(path: ':commons:commons-service')
+
+//    testImplementation(path: ':commons:commons-service')
 }
 
 group 'com.example'
 version '1.0.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 test {
