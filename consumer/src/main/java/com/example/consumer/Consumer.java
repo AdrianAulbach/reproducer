@@ -3,10 +3,10 @@ package com.example.consumer;
 import com.example.commons.api.ExampleService;
 import com.example.commons.api.*;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Default;
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 @ApplicationScoped
 public class Consumer {

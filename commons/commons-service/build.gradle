@@ -15,9 +15,9 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation libs.commonsApi
-    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+//    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation libs.containerLibs
-    implementation 'io.quarkus:quarkus-arc'
+//    implementation 'io.quarkus:quarkus-arc'
 }
 
 test {
